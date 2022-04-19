@@ -1,10 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import BolaSorteada from './components/BolaSorteada';
+import BolaElementoLista from './components/BolaElementoLista'
 
 function App() {
   return (
     <div className="App">
-      <h1>Hello World</h1>
+      <BolaSorteada letra="B" numero="1" />
+      <BolaElementoLista letra="B" numero="1"/>
     </div>
   );
 }
