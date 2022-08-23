@@ -1,7 +1,9 @@
+import "./index.css"
+
 function BolaElementoLista(props) {
     return (
       <div className="BolaElementoLista">
-        <h4>{props.letra  + props.numero}</h4>
+        <h4>{props.numero}</h4>
       </div>
     );
   }

@@ -5,22 +5,24 @@ import BolaElementoLista from './components/BolaElementoLista'
 import {gerarBolinha, sortear} from './services/bingoService';
 
 function App() {
-  const [numeroSorteado, setNumeroSorteado] = useState(0);
+  const [numeroSorteado, setNumeroSorteado] = useState(null);
   const [list, setList] = useState([]);
 
   const sortear = ()=>{
     const numero = gerarBolinha();
     setNumeroSorteado(numero)
+    console.log(numero)
     setList(list => [...list, numero])
+    console.log(JSON.stringify(list))
   }
 
   return (
     <div className="App">
-      <BolaSorteada letra="B" numero={numeroSorteado} />
+      <BolaSorteada numero={numeroSorteado} />
       <button onClick={(sortear)}></button>
       {list.map((answer) => {     
            console.log("Entered");                    
-           return (<BolaElementoLista letra="B" numero={answer}/>) 
+           return (<BolaElementoLista numero={answer}/>) 
         })}
     </div>
   );

@@ -1,7 +1,8 @@
+import "./index.css"
 function BolaSorteada(props) {
   return (
     <div className="BolaSorteada">
-      <h1>{props.letra  + props.numero}</h1>
+      <h1>{props.numero}</h1>
     </div>
   );
 }
